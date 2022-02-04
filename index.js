@@ -41,6 +41,7 @@ importForm.addEventListener('submit', (event) => {
 
   decodeSecret(secret);
   closeModal('import');
+  clearBoard();
 });
 
 const keyboard = document.getElementById('keyboard');
@@ -292,6 +293,25 @@ const copyToClipboard = (result=false) => {
     });
   }
 }
+
+const clearBoard = () => {
+  const board = document.getElementById('board');
+  const keyboard = document.getElementById('keyboard');
+
+  [...board.children].forEach((row) => {
+    [...row.children].forEach((tile) => {
+      tile.textContent = '';
+      tile.dataset.state = 'empty';
+    });
+  });
+
+  [...keyboard.children].forEach((row) => {
+    [...row.children].forEach((key) => {
+      key.dataset.state = null;
+    })
+  });
+}
+
 
 const activateModal = (name) => {
   const modal = document.getElementById(`${name}-modal`);
