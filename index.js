@@ -1,4 +1,4 @@
-const DEBUG_FLAG = true;
+const DEBUG_FLAG = false;
 
 let guess = '';
 let currentRow = 0;
