@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no">
   <link rel="stylesheet" href="style.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?">
   <link rel="manifest" href="/site.webmanifest">
-  <title>🅱WUBLE</title>
+  <title>🅱️WUBLE</title>
 </head>
 <body>
   <div class="game">
-    <div id="toast">this is a test</div>
+    <div id="toast"></div>
     <header>
       <div class="menu">
         <button class="icon" onclick="activateModal('share')">📊</button>
       </div>
-      <div class="title">🅱WUBLE</div>
+      <div class="title">🅱️WUBLE</div>
       <div class="menu">
         <button class="icon" onclick="activateModal('import')">📥</button>
         <button class="icon" onclick="activateModal('export')">💌</button>
@@ -108,6 +108,7 @@
         <button class="keyboard-key bigly" data-key="Backspace">←</button>
       </div>
     </div>
+    <small style="text-align: center">made with 💛 for the buwubz - v0.1-beta</small>
 
     <div id="share-modal" class="modal">
       <div class="modal-close" onclick="closeModal('share')">&times;</div>
@@ -141,8 +142,6 @@
         <small id="secret-code-message">click ☝ to copy to clipboard</small>
       </div>
     </div>
-
-    <small style="text-align: center">made with 💛 for the buwubz - v0.1-beta</small>
     <div id="debug" style="display: none;"></div>
   </div>
   <script src="index.js" defer></script>
