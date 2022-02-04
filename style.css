@@ -162,6 +162,7 @@ input {
   text-transform: uppercase;
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0,0,0,0.3);
+  touch-action: manipulation;
 }
 .keyboard-key[data-state="correct"] {
   background-color: var(--correct-color);
