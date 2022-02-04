@@ -136,6 +136,7 @@ input {
   display: flex;
   width: 100%;
   margin: 0 auto 8px;
+  touch-action: manipulation;
 }
 
 .half {
@@ -162,7 +163,6 @@ input {
   text-transform: uppercase;
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0,0,0,0.3);
-  touch-action: manipulation;
 }
 .keyboard-key[data-state="correct"] {
   background-color: var(--correct-color);
@@ -250,7 +250,6 @@ input {
   height: var(--keyboard-height);
   margin: 0 8px;
   user-select: none;
-  touch-action: manipulation;
 }
 
 #secret-code {
