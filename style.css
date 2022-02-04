@@ -249,6 +249,7 @@ input {
   height: var(--keyboard-height);
   margin: 0 8px;
   user-select: none;
+  touch-action: manipulation;
 }
 
 #secret-code {
