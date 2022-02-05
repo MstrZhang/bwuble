@@ -27,7 +27,7 @@ exportForm.addEventListener('submit', (event) => {
   } else if (/^[a-zA-Z]+$/.test(word) === false) {
     error.textContent = 'invalid characters in word';
   } else {
-    hash.textContent = `${player}-${btoa(word)}`;
+    hash.textContent = `${player}-${btoa(word).toLowerCase()}`;
     codeBlock.classList.remove('hidden');
   }
 });
@@ -99,7 +99,7 @@ const decodeSecret = (secret) => {
     showToast('error: secret code invalid')
   } else {
     author = secretCode[0]
-    SECRET_WORD = atob(secretCode[1]);
+    SECRET_WORD = atob(secretCode[1]).toLowerCase();
     guess = '';
     currentRow = 0;
     gameStatus = 'playing';
@@ -312,6 +312,9 @@ const clearBoard = () => {
   });
 }
 
+const updateStatistics = (fail=false) => {
+  
+}
 
 const activateModal = (name) => {
   const modal = document.getElementById(`${name}-modal`);
