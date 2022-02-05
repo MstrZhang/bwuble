@@ -27,7 +27,7 @@ exportForm.addEventListener('submit', (event) => {
   } else if (/^[a-zA-Z]+$/.test(word) === false) {
     error.textContent = 'invalid characters in word';
   } else {
-    hash.textContent = `${player}-${btoa(word).toLowerCase()}`;
+    hash.textContent = `${player}-${btoa(word.toLowerCase())}`;
     codeBlock.classList.remove('hidden');
   }
 });
